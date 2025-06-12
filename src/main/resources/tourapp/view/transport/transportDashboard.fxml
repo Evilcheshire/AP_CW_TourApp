@@ -35,7 +35,7 @@
 
                 <HBox spacing="10">
                     <Button fx:id="filterButton" text="Застосувати фільтри" onAction="#onFilterButtonClicked" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
-                    <Button fx:id="resetFiltersButton" text="Скинути" onAction="#onResetFiltersClicked" prefWidth="80" />
+                    <Button fx:id="resetFiltersButton" text="Скинути" onAction="#onResetFiltersClicked" prefWidth="100" />
                 </HBox>
             </VBox>
 

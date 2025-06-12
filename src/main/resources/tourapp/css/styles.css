@@ -85,8 +85,8 @@
 .info-card {
     -fx-background-color: white;
     -fx-border-color: #DEE2E6;
-    -fx-border-radius: 8;
-    -fx-background-radius: 8;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
     -fx-padding: 15;
     -fx-pref-width: 250;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0.0, 0, 2);
@@ -108,7 +108,7 @@
 .admin-nav-button {
     -fx-background-color: #7490AA;
     -fx-text-fill: white;
-    -fx-border-radius: 5;
+    -fx-border-radius: 5px;
     -fx-font-weight: bold;
     -fx-cursor: hand;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
@@ -132,8 +132,8 @@
     -fx-background-color: white;
     -fx-border-color: #E9ECEF;
     -fx-border-width: 1;
-    -fx-border-radius: 8;
-    -fx-background-radius: 8;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
 }
 
 .card-description {
@@ -145,8 +145,8 @@
 .card-button {
     -fx-background-color: #5DB994;
     -fx-text-fill: white;
-    -fx-border-radius: 4;
-    -fx-background-radius: 4;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
     -fx-font-size: 12px;
     -fx-cursor: hand;
     -fx-pref-width: 150;
@@ -221,7 +221,7 @@
     -fx-background-color: #7490AA;
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-background-radius: 6;
+    -fx-background-radius: 5px;
 }
 
 .root {
@@ -241,7 +241,7 @@
     -fx-background-color: #7490AA;
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-background-radius: 12px;
+    -fx-background-radius: 5px;
     -fx-cursor: hand;
     -fx-font-size: 14px;
 }
@@ -271,7 +271,7 @@
 .card-button {
     -fx-background-color: #DE944E; 
     -fx-text-fill: white;
-    -fx-background-radius: 12px;
+    -fx-background-radius: 5px;
     -fx-cursor: hand;
 }
 .card-button:hover {
@@ -310,7 +310,7 @@
 .primary-button {
     -fx-background-color: #5DB994;
     -fx-text-fill: white;
-    -fx-background-radius: 12px;
+    -fx-background-radius: 5px;
     -fx-cursor: hand;
 }
 .primary-button:hover {
@@ -320,7 +320,7 @@
 .secondary-button {
     -fx-background-color: #D37373;
     -fx-text-fill: white;
-    -fx-background-radius: 12px;
+    -fx-background-radius: 5px;
     -fx-cursor: hand;
 }
 .secondary-button:hover {
@@ -328,8 +328,8 @@
 }
 
 .text-field, .password-field {
-    -fx-border-radius: 6px;
-    -fx-background-radius: 6px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
     -fx-border-color: #B3C1CE; /* gray-100 */
     -fx-border-width: 1px;
     -fx-padding: 6px;
