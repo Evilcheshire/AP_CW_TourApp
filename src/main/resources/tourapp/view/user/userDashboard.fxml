@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainLayout" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <HBox spacing="20">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+
+            <VBox prefWidth="400" spacing="10">
+                <Label text="Пошук:" />
+                <TextField fx:id="keywordField" promptText="Введіть імʼя або email..." />
+
+                <Label text="Тип користувача:" />
+                <ComboBox fx:id="userTypeFilterCombo" maxWidth="Infinity" />
+
+                <HBox spacing="10">
+                    <Button fx:id="filterButton" text="Застосувати фільтри" onAction="#onFilterButtonClicked" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                    <Button fx:id="resetFiltersButton" text="Скинути" onAction="#onResetFiltersClicked" prefWidth="80" />
+                </HBox>
+            </VBox>
+
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button fx:id="addUserButton" onAction="#addNewUser" text="Додати користувача" />
+                    <Button fx:id="editUserButton" onAction="#editSelectedUser" text="Редагувати користувача" />
+                    <Button fx:id="deleteUserButton" onAction="#deleteSelectedUser" text="Видалити" />
+                </HBox>
+
+                <StackPane fx:id="viewContainer" VBox.vgrow="ALWAYS">
+                    <TableView fx:id="userTable">
+                        <columns>
+                            <TableColumn fx:id="idCol" text="ID" prefWidth="50" />
+                            <TableColumn fx:id="nameCol" text="Імʼя" prefWidth="150" />
+                            <TableColumn fx:id="emailCol" text="Email" prefWidth="200" />
+                            <TableColumn fx:id="typeCol" text="Тип користувача" prefWidth="150" />
+                        </columns>
+                    </TableView>
+                </StackPane>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

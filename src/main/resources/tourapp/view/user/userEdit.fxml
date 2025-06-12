@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    <spacing>15</spacing>
+
+    <Label fx:id="titleLabel" text="Редагування користувача" styleClass="h2" />
+
+    <GridPane hgap="10" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120" />
+            <ColumnConstraints minWidth="250" />
+        </columnConstraints>
+
+        <Label text="Ім'я:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nameField" promptText="Введіть ім'я користувача"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="emailField" promptText="Введіть email адресу"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Тип користувача:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="userTypeComboBox" maxWidth="Infinity"
+                  GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <CheckBox fx:id="changePasswordCheckBox" text="Змінити пароль"
+                  GridPane.columnIndex="1" GridPane.rowIndex="3"
+                  visible="false" managed="false" />
+
+        <Label fx:id="passwordLabel" text="Пароль:"
+               GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <PasswordField fx:id="passwordField" promptText="Введіть пароль"
+                       GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label fx:id="confirmPasswordLabel" text="Підтвердити пароль:"
+               GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <PasswordField fx:id="confirmPasswordField" promptText="Підтвердіть пароль"
+                       GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    </GridPane>
+
+    <VBox spacing="5" styleClass="info-box">
+        <Label text="Вимоги до паролю:" styleClass="info-label" />
+        <Label text="• Мінімум 6 символів" styleClass="info-text" />
+        <Label text="• Повинен містити принаймні одну літеру та одну цифру" styleClass="info-text" />
+        <Label text="• Не повинен містити пробіли на початку або в кінці" styleClass="info-text" />
+    </VBox>
+
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <Button fx:id="cancelButton" text="Скасувати" onAction="#handleCancel"
+                styleClass="secondary-button" />
+        <Button fx:id="saveButton" text="Зберегти" onAction="#handleSave"
+                styleClass="primary-button" defaultButton="true" />
+    </HBox>
+</VBox>

@@ -1,0 +1,46 @@
+module com.tourapp.tourapp {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires java.sql;
+    requires jbcrypt;
+    requires java.desktop;
+    requires mysql.connector.j;
+    requires org.slf4j;
+
+    opens tourapp to javafx.fxml;
+    exports tourapp;
+    exports tourapp.view;
+    exports tourapp.util;
+    exports tourapp.service.transport_service;
+    exports tourapp.service.tour_service;
+    exports tourapp.service.meal_service;
+    exports tourapp.service.location_service;
+    exports tourapp.service.user_service;
+    exports tourapp.model.tour;
+    exports tourapp.model.user;
+    exports tourapp.model.transport;
+    exports tourapp.model.location;
+    exports tourapp.model.meal;
+    exports tourapp.dao.transport_dao;
+    exports tourapp.dao.tour_dao;
+    exports tourapp.dao.location_dao;
+    exports tourapp.dao.meal_dao;
+    exports tourapp.dao.user_dao;
+    opens tourapp.view to javafx.fxml;
+    opens tourapp.util to javafx.fxml;
+    opens tourapp.service to javafx.fxml;
+    opens tourapp.dao to javafx.fxml;
+    opens tourapp.model.tour to javafx.base;
+    exports tourapp.view.location_controller;
+    opens tourapp.view.location_controller to javafx.fxml;
+    exports tourapp.view.tour_controller;
+    opens tourapp.view.tour_controller to javafx.fxml;
+    exports tourapp.view.meal_controller;
+    opens tourapp.view.meal_controller to javafx.fxml;
+    exports tourapp.view.auth_controller;
+    opens tourapp.view.auth_controller to javafx.fxml;
+    exports tourapp.view.user_controller;
+    opens tourapp.view.user_controller to javafx.fxml;
+    exports tourapp.view.transport_controller;
+    opens tourapp.view.transport_controller to javafx.fxml;
+}

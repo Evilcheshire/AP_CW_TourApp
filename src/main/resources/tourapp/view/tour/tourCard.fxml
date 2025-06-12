@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="cardRoot" spacing="10" prefWidth="280" styleClass="user-dashboard-card" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15" />
+    </padding>
+
+    <Label fx:id="titleLabel" wrapText="true">
+        <font>
+            <Font name="Arial Bold" size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="priceLabel">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="datesLabel" wrapText="true">
+        <font>
+            <Font name="Arial" size="12.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="statusLabel">
+        <font>
+            <Font name="Arial" size="12.0" />
+        </font>
+    </Label>
+
+    <Button fx:id="detailsButton" text="Деталі туру" maxWidth="Infinity" />
+
+    <Button fx:id="cancelButton" text="Скасувати бронювання" maxWidth="Infinity"
+            style="-fx-background-color: #ff6b6b; -fx-text-fill: white;" />
+</VBox>

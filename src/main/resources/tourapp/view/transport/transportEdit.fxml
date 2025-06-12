@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label text="Назва транспорту:" />
+    <TextField fx:id="nameField" promptText="Введіть назву транспорту" />
+
+    <Label text="Тип транспорту:" />
+    <ComboBox fx:id="transportTypeComboBox" maxWidth="Infinity" promptText="Виберіть тип транспорту" />
+
+    <Label text="Ціна за людину (грн):" />
+    <TextField fx:id="pricePerPersonField" promptText="Введіть ціну за людину" />
+
+    <HBox alignment="CENTER" spacing="15">
+        <padding>
+            <Insets top="20" />
+        </padding>
+        <Button onAction="#handleSave" text="Зберегти" styleClass="primary-button"/>
+        <Button onAction="#handleCancel" styleClass="secondary-button" text="Скасувати" />
+    </HBox>
+</VBox>

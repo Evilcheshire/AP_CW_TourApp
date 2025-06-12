@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainLayout" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+
+            <Label fx:id="welcomeLabel" styleClass="welcome-label" text="Вітаємо в адміністративній панелі!" />
+
+            <HBox fx:id="adminNavigation" spacing="15.0" styleClass="admin-navigation" >
+                <padding>
+                    <Insets bottom="15.0" left="0.0" right="0.0" top="15.0" />
+                </padding>
+
+                <Button fx:id="btnTours" onAction="#handleToursManagement" prefHeight="40.0" prefWidth="120.0" styleClass="admin-nav-button" text="Тури" />
+                <Button fx:id="btnLocations" onAction="#handleLocationsManagement" prefHeight="40.0" prefWidth="120.0" styleClass="admin-nav-button" text="Локації" />
+                <Button fx:id="btnMeals" onAction="#handleMealsManagement" prefHeight="40.0" prefWidth="120.0" styleClass="admin-nav-button" text="Харчування" />
+                <Button fx:id="btnTransport" onAction="#handleTransportManagement" prefHeight="40.0" prefWidth="120.0" styleClass="admin-nav-button" text="Транспорт" />
+                <Button fx:id="btnUsers" onAction="#handleUsersManagement" prefHeight="40.0" prefWidth="120.0" styleClass="admin-nav-button" text="Користувачі" />
+            </HBox>
+
+            <VBox fx:id="contentArea" spacing="20.0" styleClass="content-area" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+
+                <GridPane hgap="20.0" prefHeight="300.0" prefWidth="600.0" vgap="15.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+
+                    <VBox spacing="10.0" styleClass="info-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <padding>
+                            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        </padding>
+                        <Label styleClass="card-title" text="Управління турами" />
+                        <Label styleClass="card-description" text="Створення, редагування та видалення турів" wrapText="true" />
+                        <Button onAction="#handleToursManagement" styleClass="card-button" text="Перейти до турів" />
+                    </VBox>
+
+                    <VBox spacing="10.0" styleClass="info-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <padding>
+                            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        </padding>
+                        <Label styleClass="card-title" text="Управління локаціями" />
+                        <Label styleClass="card-description" text="Додавання та редагування місць відпочинку" wrapText="true" />
+                        <Button onAction="#handleLocationsManagement" styleClass="card-button" text="Перейти до локацій" />
+                    </VBox>
+
+                    <VBox spacing="10.0" styleClass="info-card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <padding>
+                            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        </padding>
+                        <Label prefWidth="164.0" styleClass="card-title" text="Управління харчуванням"/>
+                        <Label styleClass="card-description" text="Налаштування типів та варіантів харчування" wrapText="true" />
+                        <Button onAction="#handleMealsManagement" styleClass="card-button" text="Перейти до харчування" />
+                    </VBox>
+
+                    <VBox spacing="10.0" styleClass="info-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <padding>
+                            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        </padding>
+                        <Label styleClass="card-title" text="Управління транспортом"/>
+                        <Label styleClass="card-description" text="Додавання та налаштування транспортних засобів" wrapText="true" />
+                        <Button onAction="#handleTransportManagement" styleClass="card-button" text="Перейти до транспорту" />
+                    </VBox>
+
+                    <VBox fx:id="usersCard" spacing="10.0" styleClass="info-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <padding>
+                            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        </padding>
+                        <Label styleClass="card-title" text="Управління користувачами"/>
+                        <Label styleClass="card-description" text="Створення та редагування облікових записів" wrapText="true" />
+                        <Button onAction="#handleUsersManagement" styleClass="card-button" text="Перейти до користувачів" />
+                    </VBox>
+                </GridPane>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<HBox fx:id="navigationBar" spacing="10" style="-fx-background-color: #2C3E50; -fx-padding: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+    <Button fx:id="btnSearch" onAction="#handleSearch" style="-fx-text-fill: white; -fx-background-color: #34495E;" text="Пошук турів" />
+    <Button fx:id="btnBooked" onAction="#handleBooked" style="-fx-text-fill: white; -fx-background-color: #34495E;" text="Мої тури" />
+    <Button fx:id="btnProfile" onAction="#handleProfile" style="-fx-text-fill: white; -fx-background-color: #34495E;" text="Профіль" />
+    <Button fx:id="btnAdminPanel" onAction="#handleAdminPanel" style="-fx-text-fill: white; -fx-background-color: #34495E;" text="Адміністрування" />
+    <Region HBox.hgrow="ALWAYS" />
+    <Label fx:id="userInfoLabel" prefHeight="25.0" style="-fx-text-fill: white;" />
+    <Button fx:id="btnLogout" onAction="#handleLogout" style="-fx-text-fill: white; -fx-background-color: #34495E;" text="Вийти" />
+    <Button fx:id="btnExitApp" onAction="#handleExitApp" style="-fx-text-fill: white; -fx-background-color: #E74C3C;" text="Закрити" />
+</HBox>

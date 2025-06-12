@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <VBox fx:id="regBox"
+          alignment="CENTER"
+          spacing="15"
+          prefWidth="960"
+          prefHeight="540">
+        <Label text="Реєстрація в TourApp" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <TextField fx:id="usernameField" promptText="Логін" maxWidth="300"/>
+        <TextField fx:id="emailField" promptText="Електронна пошта" maxWidth="300"/>
+        <PasswordField fx:id="passwordField" promptText="Пароль" maxWidth="300"/>
+
+        <Button fx:id="registerButton" text="Зареєструвватися" prefWidth="200" onAction="#handleRegister" />
+        <Hyperlink fx:id="loginLink" text="Є акаунт? Увійти" onAction="#goToLogin" />
+    </VBox>
+</AnchorPane>

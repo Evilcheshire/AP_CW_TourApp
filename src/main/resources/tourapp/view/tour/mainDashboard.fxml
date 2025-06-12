@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainLayout" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <HBox spacing="20">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+
+            <VBox spacing="10" prefWidth="400">
+                <Label text="Пошук:" />
+                <TextField fx:id="keywordField" promptText="Введіть країну або назву туру..." />
+
+                <Label text="Країна:" />
+                <ComboBox fx:id="countryFilterCombo" maxWidth="Infinity" />
+
+                <Label text="Тип туру:" />
+                <ComboBox fx:id="tourTypeFilterCombo" maxWidth="Infinity" />
+
+                <Label text="Мін. ціна:" />
+                <Spinner fx:id="minPriceSpinner" editable="true" maxWidth="Infinity" />
+
+                <Label text="Макс. ціна:" />
+                <Spinner fx:id="maxPriceSpinner" editable="true" maxWidth="Infinity" />
+
+                <Label text="Тип харчування:" />
+                <ListView fx:id="mealTypeFilterList" maxHeight="80" />
+
+                <Label text="Транспорт:" />
+                <ComboBox fx:id="transportTypeFilterCombo" maxWidth="Infinity" />
+
+                <Label text="Дата початку:" />
+                <DatePicker fx:id="startDatePicker" maxWidth="Infinity" />
+
+                <Label text="Дата закінчення:" />
+                <DatePicker fx:id="endDatePicker" maxWidth="Infinity" />
+
+                <HBox spacing="10">
+                    <Button fx:id="filterButton" text="Застосувати фільтри" onAction="#onFilterButtonClicked" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                    <Button fx:id="resetFiltersButton" text="Скинути" onAction="#onResetFiltersClicked" prefWidth="80" />
+                </HBox>
+            </VBox>
+
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <Button fx:id="addTourButton" text="Додати тур" onAction="#addNewTour" />
+                    <Button fx:id="editTourButton" text="Редагувати" onAction="#editSelectedTour" />
+                    <Button fx:id="addTourTypeButton" text="Додати тип туру" onAction="#addNewTourType" />
+                    <Button fx:id="deleteTourButton" text="Видалити" onAction="#deleteSelectedTour" />
+                    <Button fx:id="toggleStatusButton" text="Змінити статус" onAction="#toggleTourStatus" />
+                    <Button fx:id="editTourTypeButton" text="Редагувати типи" onAction="#editSelectedTourType" />
+                </HBox>
+
+                <StackPane fx:id="viewContainer" VBox.vgrow="ALWAYS">
+                    <TableView fx:id="tourTable">
+                        <columns>
+                            <TableColumn fx:id="idCol" text="ID" prefWidth="50" />
+                            <TableColumn fx:id="descCol" text="Опис" prefWidth="300" />
+                            <TableColumn fx:id="priceCol" text="Ціна" prefWidth="100" />
+                            <TableColumn fx:id="startCol" text="Дата початку" prefWidth="120" />
+                            <TableColumn fx:id="endCol" text="Дата завершення" prefWidth="120" />
+                            <TableColumn fx:id="activeCol" text="Активний" prefWidth="100" />
+                        </columns>
+                    </TableView>
+
+                    <ScrollPane fx:id="cardScrollPane" visible="false" managed="false">
+                        <FlowPane fx:id="tourCardContainer" styleClass="user-dashboard-flow" prefWrapLength="800">
+                        </FlowPane>
+                    </ScrollPane>
+                </StackPane>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

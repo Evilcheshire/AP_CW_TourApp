@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainLayout" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" BorderPane.alignment="CENTER">
+                <content>
+                    <VBox alignment="TOP_CENTER" spacing="20.0">
+                        <padding>
+                            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                        </padding>
+                        <children>
+                            <Label styleClass="section-title" text="Особистий профіль">
+
+                            </Label>
+
+                            <VBox alignment="CENTER" maxWidth="500.0" spacing="15.0" styleClass="profile-card">
+                                <padding>
+                                    <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                                </padding>
+                                <children>
+                                    <Label styleClass="subsection-title" text="Основна інформація"></Label>
+
+                                    <GridPane hgap="15.0" vgap="15.0">
+                                        <columnConstraints>
+                                            <ColumnConstraints halignment="RIGHT" minWidth="120.0" />
+                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" />
+                                        </columnConstraints>
+                                        <children>
+                                            <Label text="Ім'я:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                            <TextField fx:id="nameField" promptText="Введіть ваше ім'я" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                            <TextField fx:id="emailField" promptText="Введіть ваш email" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                            <Label text="Тип користувача:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                            <Label fx:id="userTypeLabel" styleClass="user-type-label" text="Клієнт" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        </children>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                                    </GridPane>
+
+                                    <Button fx:id="updateProfileButton" mnemonicParsing="false" onAction="#handleUpdateProfile" styleClass="primary-button" text="Оновити профіль" />
+                                </children>
+                            </VBox>
+
+                            <VBox alignment="CENTER" maxWidth="500.0" spacing="15.0" styleClass="profile-card">
+                                <padding>
+                                    <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                                </padding>
+                                <children>
+                                    <Label styleClass="subsection-title" text="Зміна паролю" />
+
+                                    <GridPane hgap="15.0" vgap="15.0">
+                                        <columnConstraints>
+                                            <ColumnConstraints halignment="RIGHT" minWidth="150.0" />
+                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" />
+                                        </columnConstraints>
+                                        <children>
+                                            <Label text="Поточний пароль:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                            <PasswordField fx:id="currentPasswordField" promptText="Введіть поточний пароль" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                            <Label text="Новий пароль:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                            <PasswordField fx:id="newPasswordField" promptText="Введіть новий пароль" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                            <Label text="Підтвердіть пароль:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                            <PasswordField fx:id="confirmPasswordField" promptText="Підтвердіть новий пароль" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        </children>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                                    </GridPane>
+
+                                    <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#handleChangePassword" styleClass="secondary-button" text="Змінити пароль">
+                                    </Button>
+                                </children>
+                            </VBox>
+                        </children>
+                    </VBox>
+                </content>
+            </ScrollPane>
+   </center>
+</BorderPane>

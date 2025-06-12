@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="mainLayout" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <HBox spacing="20">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+
+            <VBox prefWidth="400" spacing="10">
+                <Label text="Пошук:" />
+                <TextField fx:id="keywordField" promptText="Введіть назву страви або типу..." />
+
+                <Label text="Тип харчування:" />
+                <ComboBox fx:id="mealTypeFilterCombo" maxWidth="Infinity" />
+
+                <Label text="Мін. ціна за день:" />
+                <Spinner fx:id="minPriceSpinner" editable="true" maxWidth="Infinity" />
+
+                <Label text="Макс. ціна за день:" />
+                <Spinner fx:id="maxPriceSpinner" editable="true" maxWidth="Infinity" />
+
+                <Label text="Мін. кількість прийомів їжі:" />
+                <Spinner fx:id="minMealsSpinner" editable="true" maxWidth="Infinity" />
+
+                <Label text="Макс. кількість прийомів їжі:" />
+                <Spinner fx:id="maxMealsSpinner" editable="true" maxWidth="Infinity" />
+
+                <HBox spacing="10">
+                    <Button fx:id="filterButton" text="Застосувати фільтри" onAction="#onFilterButtonClicked" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                    <Button fx:id="resetFiltersButton" text="Скинути" onAction="#onResetFiltersClicked" prefWidth="80" />
+                </HBox>
+            </VBox>
+
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button fx:id="addMealButton" onAction="#addNewMeal" text="Додати харчування" />
+                    <Button fx:id="addMealTypeButton" onAction="#addNewMealType" text="Додати тип харчування" />
+                    <Button fx:id="editMealButton" onAction="#editSelectedMeal" text="Редагувати харчування" />
+                    <Button fx:id="editMealTypeButton" onAction="#editSelectedMealType" text="Редагувати типи" />
+                    <Button fx:id="deleteMealButton" onAction="#deleteSelectedMeal" text="Видалити" />
+                </HBox>
+
+                <StackPane fx:id="viewContainer" VBox.vgrow="ALWAYS">
+                    <TableView fx:id="mealTable">
+                        <columns>
+                            <TableColumn fx:id="idCol" prefWidth="50" text="ID" />
+                            <TableColumn fx:id="nameCol" prefWidth="200" text="Назва" />
+                            <TableColumn fx:id="mealsPerDayCol" prefWidth="150" text="Кількість прийомів їжі" />
+                            <TableColumn fx:id="costCol" prefWidth="150" text="Ціна за день" />
+                            <TableColumn fx:id="mealTypesCol" prefWidth="250" text="Типи харчування" />
+                        </columns>
+                    </TableView>
+                </StackPane>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

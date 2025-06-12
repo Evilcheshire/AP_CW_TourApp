@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+
+    <center>
+        <VBox spacing="15">
+            <GridPane hgap="15" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="NEVER" minWidth="100" />
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="200" />
+                </columnConstraints>
+
+                <Label text="Опис:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="descriptionField" prefWidth="300" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <Label text="Ціна (грн):" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="priceField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                <Label text="Дата початку:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <DatePicker fx:id="startDatePicker" GridPane.rowIndex="2" GridPane.columnIndex="1" maxWidth="Infinity" />
+
+                <Label text="Дата закінчення:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <DatePicker fx:id="endDatePicker" GridPane.rowIndex="3" GridPane.columnIndex="1" maxWidth="Infinity" />
+
+                <Label text="Тип туру:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                <ComboBox fx:id="tourTypeComboBox" GridPane.rowIndex="4" GridPane.columnIndex="1" maxWidth="Infinity" />
+
+                <Label text="Харчування:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                <ComboBox fx:id="mealTypeComboBox" GridPane.rowIndex="5" GridPane.columnIndex="1" maxWidth="Infinity" />
+
+                <Label text="Транспорт:" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+                <ComboBox fx:id="transportTypeComboBox" GridPane.rowIndex="6" GridPane.columnIndex="1" maxWidth="Infinity" />
+
+                <Label text="Активний:" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+                <CheckBox fx:id="activeCheckBox" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+            </GridPane>
+
+            <Label text="Локації:" style="-fx-font-weight: bold;" />
+            <HBox spacing="10" VBox.vgrow="ALWAYS">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Доступні локації:" />
+                    <ListView fx:id="availableLocationsListView" VBox.vgrow="ALWAYS" />
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER">
+                    <Region VBox.vgrow="ALWAYS" />
+                    <Button fx:id="addLocationButton" text="&gt;&gt;" onAction="#handleAddLocation" />
+                    <Button fx:id="removeLocationButton" text="&lt;&lt;" onAction="#handleRemoveLocation" />
+                    <Region VBox.vgrow="ALWAYS" />
+                </VBox>
+
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Вибрані локації:" />
+                    <ListView fx:id="selectedLocationsListView" VBox.vgrow="ALWAYS" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="20" />
+            </padding>
+            <Button text="Скасувати" onAction="#handleCancel" styleClass="secondary-button"/>
+            <Button text="Зберегти" onAction="#handleSave" styleClass="primary-button" defaultButton="true" />
+        </HBox>
+    </bottom>
+</BorderPane>
