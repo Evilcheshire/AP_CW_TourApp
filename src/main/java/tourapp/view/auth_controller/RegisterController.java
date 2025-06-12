@@ -69,10 +69,7 @@ public class RegisterController extends BaseController {
                 return;
             }
 
-            User newUser = new User();
-            newUser.setName(username);
-            newUser.setEmail(email);
-            newUser.setUserType(role);
+            User newUser = new User(username, email, password, role);
 
             boolean created = userService.create(newUser);
             if (created) {

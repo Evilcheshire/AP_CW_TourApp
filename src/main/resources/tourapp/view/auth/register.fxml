@@ -18,7 +18,7 @@
         <TextField fx:id="emailField" promptText="Електронна пошта" maxWidth="300"/>
         <PasswordField fx:id="passwordField" promptText="Пароль" maxWidth="300"/>
 
-        <Button fx:id="registerButton" text="Зареєструвватися" prefWidth="200" onAction="#handleRegister" />
+        <Button fx:id="registerButton" text="Зареєструватися" prefWidth="200" onAction="#handleRegister" />
         <Hyperlink fx:id="loginLink" text="Є акаунт? Увійти" onAction="#goToLogin" />
     </VBox>
 </AnchorPane>

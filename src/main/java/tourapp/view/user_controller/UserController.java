@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -251,6 +252,9 @@ public class UserController extends BaseController {
         }
 
         Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION);
+        Stage dialogStage = (Stage) confirmation.getDialogPane().getScene().getWindow();
+        dialogStage.getIcons().add(new Image(getClass().getResource("/tourapp/images/info.png").toExternalForm()));
+        confirmation.getDialogPane().getStylesheets().add(getClass().getResource("/tourapp/css/styles.css").toExternalForm());
         confirmation.setTitle("Підтвердження видалення");
         confirmation.setHeaderText("Видалення користувача");
         confirmation.setContentText(String.format(

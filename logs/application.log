@@ -3123,3 +3123,51 @@ Name: Іван Петренко
 Email: ivan@test.com
 User Type: USER
 2025-06-12 08:12:47 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Видалено тип туру: Оригінальна назва
+2025-06-12 12:14:51 [main] INFO  tourapp.view.BaseController - Виконано реєстрацію: User ID: -1
+Name: testuser
+Email: test@example.com
+User Type: userType.
+2025-06-12 12:14:51 [main] INFO  tourapp.view.BaseController - Виконано реєстрацію: User ID: -1
+Name: testuser
+Email: test@example.com
+User Type: userType.
+2025-06-12 12:14:52 [main] INFO  tourapp.view.BaseController - Виконано реєстрацію: User ID: -1
+Name: testuser
+Email: test@example.com
+User Type: userType.
+2025-06-12 12:14:52 [main] INFO  tourapp.view.BaseController - Виконано реєстрацію: User ID: -1
+Name: testuser
+Email: test@example.com
+User Type: userType.
+2025-06-12 12:14:53 [main] INFO  tourapp.view.BaseController - Виконано реєстрацію: User ID: -1
+Name: testuser
+Email: test@example.com
+User Type: userType.
+2025-06-12 12:14:57 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Оновлено тип транспорту: Оригінальна назва
+2025-06-12 12:15:05 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Оновлено тип транспорту: Оновлена назва
+2025-06-12 12:15:11 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Оновлено тип транспорту: Назва з пробілами
+2025-06-12 12:15:17 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Відредаговано користувача: User ID: 1
+Name: Ім'я з пробілами
+Email: trimmed@test.com
+User Type: USER
+2025-06-12 12:15:21 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Відредаговано користувача: User ID: 1
+Name: Тест callback оновлення
+Email: ivan@test.com
+User Type: USER
+2025-06-12 12:15:24 [JavaFX Application Thread] ERROR tourapp.view.BaseController - Помилка збереження користувача: Database error
+2025-06-12 12:15:30 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Відредаговано користувача: User ID: 1
+Name: Оновлений Користувач
+Email: updated@test.com
+User Type: MANAGER
+2025-06-12 12:15:31 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Відредаговано користувача: User ID: 1
+Name: Нове ім'я
+Email: ivan@test.com
+User Type: USER
+2025-06-12 12:15:33 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Створено користувача: User ID: -1
+Name: Новий Користувач
+Email: new@test.com
+User Type: USER
+2025-06-12 12:15:35 [JavaFX Application Thread] INFO  tourapp.view.BaseController - Відредаговано користувача: User ID: 1
+Name: Іван Петренко
+Email: ivan@test.com
+User Type: USER
